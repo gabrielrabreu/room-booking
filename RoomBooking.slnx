@@ -1,0 +1,31 @@
+<Solution>
+  <Folder Name="/Notifications/">
+    <Project Path="src/RoomBooking.Notifications/RoomBooking.Notifications.csproj" Id="7ac494c4-3ab1-429e-9646-609cca727806" />
+  </Folder>
+  <Folder Name="/Reports/">
+    <Project Path="src/RoomBooking.Reports/RoomBooking.Reports.csproj" Id="456dc232-622e-4aab-8c0c-93d34b0968da" />
+  </Folder>
+  <Folder Name="/Reservations/">
+    <Project Path="src/RoomBooking.Reservations.Contracts/RoomBooking.Reservations.Contracts.csproj" Id="6912e540-b0ba-4cab-bf9b-ecd01b00b4c1" />
+    <Project Path="src/RoomBooking.Reservations/RoomBooking.Reservations.csproj" Id="b60b7a59-85fa-4b4c-ac3b-083a2211abd2" />
+  </Folder>
+  <Folder Name="/Rooms/">
+    <Project Path="src/RoomBooking.Rooms.Contracts/RoomBooking.Rooms.Contracts.csproj" Id="429a643e-4236-4588-8750-9010f335d97d" />
+    <Project Path="src/RoomBooking.Rooms/RoomBooking.Rooms.csproj" Id="891f81f9-4ea6-4fd8-a7a2-2c84d065eaf0" />
+  </Folder>
+  <Folder Name="/Users/">
+    <Project Path="src/RoomBooking.Users.Contracts/RoomBooking.Users.Contracts.csproj" Id="5064dcea-04ee-4d70-bb63-fb6ad8a3d7f8" />
+    <Project Path="src/RoomBooking.Users/RoomBooking.Users.csproj" Id="c8bae5cd-66a4-40a1-8f64-cad95532f1f7" />
+  </Folder>
+  <Folder Name="/_Host/">
+    <Project Path="src/RoomBooking.Api/RoomBooking.Api.csproj" Id="1d9a08a2-fbce-412a-8a98-1877bc65e781" />
+  </Folder>
+  <Folder Name="/__Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+</Solution>
