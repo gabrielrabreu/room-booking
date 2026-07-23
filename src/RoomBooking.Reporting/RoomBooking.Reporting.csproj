@@ -8,8 +8,4 @@
     </PackageReference>
   </ItemGroup>
   
-  <ItemGroup>
-    <ProjectReference Include="..\RoomBooking.Users.Contracts\RoomBooking.Users.Contracts.csproj" />
-  </ItemGroup>
-
 </Project>

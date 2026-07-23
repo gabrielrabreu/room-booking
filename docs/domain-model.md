@@ -31,18 +31,18 @@ class Room {
 }
 ```
 
-## Reservations
+## Bookings
 
 ```mermaid
 classDiagram
 
-class Reservation {
+class Booking {
     +Guid Id
     +Guid UserId
     +Guid RoomId
     +DateTime StartAt
     +DateTime EndAt
-    +ReservationStatus Status
+    +Bookingstatus Status
     +DateTime CreatedAt
     +DateTime LastModifiedAt
     +DateTime? ConfirmedAt
@@ -50,26 +50,26 @@ class Reservation {
     +Confirm()
 }
 
-class ReservationStatus {
+class Bookingstatus {
     <<enumeration>>
     Pending,
     Confirmed
 }
 ```
 
-## Reports
+## Reporting
 
 ```mermaid
 classDiagram
 
-class FactReservation {
-    +long ReservationFactKey
+class FactBooking {
+    +long BookingFactKey
 
     +int DateKey
     +int RoomKey
     +int UserKey
 
-    +Guid ReservationId
+    +Guid BookingId
 
     +int DurationMinutes
 
@@ -110,7 +110,7 @@ class DimUser {
     +DateTime LastUpdatedAt
 }
 
-FactReservation --> DimDate
-FactReservation --> DimRoom
-FactReservation --> DimUser
+FactBooking --> DimDate
+FactBooking --> DimRoom
+FactBooking --> DimUser
 ```

@@ -11,23 +11,23 @@ flowchart LR
     Rooms[RoomBooking.Rooms]
     RoomsContracts[RoomBooking.Rooms.Contracts]
 
-    Reservations[RoomBooking.Reservations]
-    ReservationsContracts[RoomBooking.Reservations.Contracts]
+    Bookings[RoomBooking.Bookings]
+    BookingsContracts[RoomBooking.Bookings.Contracts]
 
-    Notifications[RoomBooking.Notifications]
-    Reports[RoomBooking.Reports]
+    Email[RoomBooking.Email]
+    Reporting[RoomBooking.Reporting]
 
     Api --> Users
     Api --> Rooms
-    Api --> Reservations
-    Api --> Notifications
-    Api --> Reports
+    Api --> Bookings
+    Api --> Email
+    Api --> Reporting
 
-    Reservations --> UsersContracts
-    Reservations --> RoomsContracts
+    Bookings --> UsersContracts
+    Bookings --> RoomsContracts
 
-    Notifications --> ReservationsContracts
-    Reports --> ReservationsContracts
+    Email --> BookingsContracts
+    Reporting --> BookingsContracts
 ```
 
 ## Users
@@ -124,67 +124,67 @@ RoomBooking.Rooms/
 └── RoomsModuleExtensions.cs
 ```
 
-## Reservations
+## Bookings
 
 ```
-RoomBooking.Reservations/
+RoomBooking.Bookings/
     Features/
-│   ├── ReservationSummaryResponse.cs
-│   ├── ReservationDetailsResponse.cs
-        CreateReservation/
-│   │   ├── CreateReservationRequest.cs
-│           CreateReservationEndpoint.cs
-            CreateReservationCommand.cs
-            CreateReservationHandler.cs
-            CreateReservationValidator.cs
-        ConfirmReservation/
-│       ├── ConfirmReservationEndpoint.cs
-            ConfirmReservationCommand.cs
-            ConfirmReservationHandler.cs
-            ConfirmReservationValidator.cs
-        ListReservations/
-│       ├── ListReservationsRequest.cs
-│       ├── ListReservationsEndpoint.cs
-            ListReservationsQuery.cs
-            ListReservationsHandler.cs
-            ListReservationsValidator.cs
+│   ├── BookingsummaryResponse.cs
+│   ├── BookingDetailsResponse.cs
+        CreateBooking/
+│   │   ├── CreateBookingRequest.cs
+│           CreateBookingEndpoint.cs
+            CreateBookingCommand.cs
+            CreateBookingHandler.cs
+            CreateBookingValidator.cs
+        ConfirmBooking/
+│       ├── ConfirmBookingEndpoint.cs
+            ConfirmBookingCommand.cs
+            ConfirmBookingHandler.cs
+            ConfirmBookingValidator.cs
+        ListBookings/
+│       ├── ListBookingsRequest.cs
+│       ├── ListBookingsEndpoint.cs
+            ListBookingsQuery.cs
+            ListBookingsHandler.cs
+            ListBookingsValidator.cs
     Domain/
-        ReservationAggregate/
-            Reservation.cs
-            ReservationStatus.cs
+        BookingAggregate/
+            Booking.cs
+            Bookingstatus.cs
     Data/
         Configs/
-            ReservationConfig.cs
-        ReservationsDbContext
-        ReservationsDbContextFactory
-    ReservationsModuleExtensions.cs
+            BookingConfig.cs
+        BookingsDbContext
+        BookingsDbContextFactory
+    BookingsModuleExtensions.cs
 
-RoomBooking.Reservations.Contracts/
+RoomBooking.Bookings.Contracts/
     Events/
-        ReservationConfirmedEvent.cs
+        BookingConfirmedEvent.cs
 ```
 
-## Notifications
+## Email
 
 ```
-RoomBooking.Notifications/
+RoomBooking.Email/
     Integrations/
-        ReservationConfirmedEventHandler.cs
-    NotificationsModuleExtensions.cs
+        BookingConfirmedEventHandler.cs
+    EmailModuleExtensions.cs
 ```
 
-## Reports
+## Reporting
 
 ```
-RoomBooking.Reports/
+RoomBooking.Reporting/
     Features/
-        ReservationsByPeriod/
-            ReservationsByPeriodRequest.cs
-            ReservationsByPeriodEndpoint.cs
-            ReservationsByPeriodQuery.cs
-            ReservationsByPeriodHandler.cs
-            ReservationsByPeriodValidator.cs
-            ReservationsByPeriodResponse.cs
+        BookingsByPeriod/
+            BookingsByPeriodRequest.cs
+            BookingsByPeriodEndpoint.cs
+            BookingsByPeriodQuery.cs
+            BookingsByPeriodHandler.cs
+            BookingsByPeriodValidator.cs
+            BookingsByPeriodResponse.cs
         RoomUsageStatistics/
             RoomUsageStatisticsEndpoint.cs
             RoomUsageStatisticsQuery.cs
@@ -192,19 +192,19 @@ RoomBooking.Reports/
             RoomUsageStatisticsValidator.cs
             RoomUsageStatisticsResponse.cs
     Ingest/
-        ReservationConfirmedEventHandler.cs
+        BookingConfirmedEventHandler.cs
     Models/
         DimDate.cs
         DimRoom.cs
         DimUser.cs
-        FactReservation.cs
+        FactBooking.cs
     Data/
         Configs/
             DimDateConfig.cs
             DimRoomConfig.cs
             DimUserConfig.cs
-            FactReservationConfig.cs
-        ReportsDbContext
-        ReportsDbContextFactory
-    ReportsModuleExtensions.cs
+            FactBookingConfig.cs
+        ReportingDbContext
+        ReportingDbContextFactory
+    ReportingModuleExtensions.cs
 ```

@@ -5,4 +5,12 @@
     <PackageReference Include="Microsoft.OpenApi" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RoomBooking.Email\RoomBooking.Email.csproj" />
+    <ProjectReference Include="..\RoomBooking.Reporting\RoomBooking.Reporting.csproj" />
+    <ProjectReference Include="..\RoomBooking.Bookings\RoomBooking.Bookings.csproj" />
+    <ProjectReference Include="..\RoomBooking.Rooms\RoomBooking.Rooms.csproj" />
+    <ProjectReference Include="..\RoomBooking.Users\RoomBooking.Users.csproj" />
+  </ItemGroup>
+
 </Project>

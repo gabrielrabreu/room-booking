@@ -13,9 +13,9 @@ A Modular Monolith study project built with .NET.
 
 - Users
 - Rooms
-- Reservations
-- Notifications
-- Reports
+- Bookings
+- Email
+- Reporting
 
 ## Documentation
 

@@ -1,13 +1,13 @@
 <Solution>
-  <Folder Name="/Notifications/">
-    <Project Path="src/RoomBooking.Notifications/RoomBooking.Notifications.csproj" Id="7ac494c4-3ab1-429e-9646-609cca727806" />
+  <Folder Name="/Email/">
+    <Project Path="src/RoomBooking.Email/RoomBooking.Email.csproj" Id="7ac494c4-3ab1-429e-9646-609cca727806" />
   </Folder>
-  <Folder Name="/Reports/">
-    <Project Path="src/RoomBooking.Reports/RoomBooking.Reports.csproj" Id="456dc232-622e-4aab-8c0c-93d34b0968da" />
+  <Folder Name="/Reporting/">
+    <Project Path="src/RoomBooking.Reporting/RoomBooking.Reporting.csproj" Id="456dc232-622e-4aab-8c0c-93d34b0968da" />
   </Folder>
-  <Folder Name="/Reservations/">
-    <Project Path="src/RoomBooking.Reservations.Contracts/RoomBooking.Reservations.Contracts.csproj" Id="6912e540-b0ba-4cab-bf9b-ecd01b00b4c1" />
-    <Project Path="src/RoomBooking.Reservations/RoomBooking.Reservations.csproj" Id="b60b7a59-85fa-4b4c-ac3b-083a2211abd2" />
+  <Folder Name="/Bookings/">
+    <Project Path="src/RoomBooking.Bookings.Contracts/RoomBooking.Bookings.Contracts.csproj" Id="6912e540-b0ba-4cab-bf9b-ecd01b00b4c1" />
+    <Project Path="src/RoomBooking.Bookings/RoomBooking.Bookings.csproj" Id="b60b7a59-85fa-4b4c-ac3b-083a2211abd2" />
   </Folder>
   <Folder Name="/Rooms/">
     <Project Path="src/RoomBooking.Rooms.Contracts/RoomBooking.Rooms.Contracts.csproj" Id="429a643e-4236-4588-8750-9010f335d97d" />

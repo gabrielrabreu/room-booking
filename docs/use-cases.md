@@ -22,14 +22,14 @@ flowchart LR
         UC7(Deactivate Room)
     end
 
-    subgraph Reservations
-        UC8(Create Reservation)
-        UC9(Confirm Reservation)
-        UC10(Get Reservations)
+    subgraph Bookings
+        UC8(Create Booking)
+        UC9(Confirm Booking)
+        UC10(Get Bookings)
     end
 
-    subgraph Reports
-        UC11(Reservations By Period)
+    subgraph Reporting
+        UC11(Bookings By Period)
         UC12(Room Usage Statistics)
     end
 
