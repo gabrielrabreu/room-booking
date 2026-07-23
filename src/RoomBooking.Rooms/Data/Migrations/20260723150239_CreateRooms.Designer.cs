@@ -4,9 +4,11 @@
 namespace RoomBooking.Rooms.Data.Migrations;
 
 [DbContext(typeof(RoomsDbContext))]
-partial class RoomsDbContextModelSnapshot : ModelSnapshot
+[Migration("20260723150239_CreateRooms")]
+partial class CreateRooms
 {
-    protected override void BuildModel(ModelBuilder modelBuilder)
+    /// <inheritdoc />
+    protected override void BuildTargetModel(ModelBuilder modelBuilder)
     {
 #pragma warning disable 612, 618
         modelBuilder

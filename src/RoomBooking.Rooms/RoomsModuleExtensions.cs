@@ -1,4 +1,5 @@
 using RoomBooking.Rooms.Data;
+using RoomBooking.Rooms.Features.CreateRoom;
 
 namespace RoomBooking.Rooms;
 
@@ -9,7 +10,19 @@ public static class RoomsModuleExtensions
         services.AddDbContext<RoomsDbContext>(
             options => options.UseSqlServer(configuration.GetConnectionString("RoomsDb")));
 
+        services.AddValidatorsFromAssemblyContaining<CreateRoomValidator>();
+
         return services;
+    }
+
+    public static IEndpointRouteBuilder MapRoomsModuleEndpoints(this IEndpointRouteBuilder app)
+    {
+        var group = app.MapGroup("/rooms")
+            .WithTags("Rooms");
+
+        group.MapCreateRoomEndpoint();
+
+        return app;
     }
 
     public static async Task<IServiceProvider> EnsureRoomsModuleDatabaseAsync(this IServiceProvider services)
