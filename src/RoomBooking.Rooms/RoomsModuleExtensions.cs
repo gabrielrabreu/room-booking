@@ -1,5 +1,6 @@
 using RoomBooking.Rooms.Data;
 using RoomBooking.Rooms.Features.CreateRoom;
+using RoomBooking.Rooms.Features.ListRooms;
 
 namespace RoomBooking.Rooms;
 
@@ -20,6 +21,7 @@ public static class RoomsModuleExtensions
         var group = app.MapGroup("/rooms")
             .WithTags("Rooms");
 
+        group.MapListRoomsEndpoint();
         group.MapCreateRoomEndpoint();
 
         return app;

@@ -13,6 +13,6 @@ public class CreateRoomHandler(RoomsDbContext dbContext) : ICommandHandler<Creat
 
         await dbContext.SaveChangesAsync(cancellationToken);
 
-        return new RoomDetailsResponse(room.Id, room.Name);
+        return new RoomDetailsResponse(room.Id, room.Name, room.CreatedAt, room.UpdatedAt);
     }
 }
